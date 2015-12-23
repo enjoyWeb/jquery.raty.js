@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>评分插件</title>
+<script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="javascript/jquery.raty.js"></script>
+</head>
+<body>
+<div id="raty" data-number="5" data-path="images/raty"></div>
+<div id="ratydesc" class="hint"></div>
+<script type="text/javascript">
+$('#raty').raty({
+	path: function() {						//图片路径
+		return this.getAttribute('data-path');
+	},
+	number: function() {					//星星数量
+		return $(this).attr('data-number');
+	},
+	starOn: 'star-smile-gorgeous.png',	//激活星星图标
+	starOff: 'star-smile-off.png',			//未激活星星图标
+	halfShow : 'false',//是否显示半颗星星
+	hints: ['很差', '一般', '好', '很好', '非常好'],			//等级的内容
+	target: '#ratydesc',//评分等级显示的div
+	targetType: 'hint',	//评分等级显示的div
+	targetKeep: true,//固定显示评分结果
+	targetText: '请打分'//评分结果默认显示文字
+});
+</script>
+</body>
+</html>
