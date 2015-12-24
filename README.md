@@ -20,7 +20,7 @@
 ```
 
 ###2、demo
-* [PDF文件阅读demo](http://192.168.14.97:8080/acc/plugin/raty)
+* [jquery.raty.js评分插件demo](http://192.168.14.97:8080/acc/plugin/raty)
 
 ##配置和API
 ###1、页面配置
